@@ -1,0 +1,80 @@
+# Tienda Chikawa - Python Personal 🛒🐹
+
+¡Bienvenido al repositorio de **Tienda Chikawa**! Esta es una aplicación web ligera desarrollada con **FastAPI** para el backend, **SQLite** como motor de base de datos para la gestión de productos/inventario, y una interfaz de usuario minimalista con HTML, CSS y JavaScript modernos.
+
+---
+
+## 🚀 Características del Proyecto
+* **FastAPI Backend:** Rutas rápidas, estructuradas y asíncronas para la lógica de la tienda.
+* **Base de Datos SQLite:** Almacenamiento local mediante el archivo `tienda_chikawa.db` gestionado desde `database.py`.
+* **Frontend Estático Integrado:** Archivos HTML, estilos CSS avanzados y lógica en JS alojados en la carpeta `static/`.
+
+---
+
+## 📂 Estructura del Repositorio
+El árbol principal del proyecto está organizado de la siguiente manera:
+
+```text
+Python-Personal/
+├── tienda_chikawa.db    # Base de datos SQLite
+├── database.py          # Configuración y conexión a la base de datos
+├── main.py              # Punto de entrada de la aplicación FastAPI
+├── requirements.txt     # Dependencias del proyecto
+├── README.md            # Documentación del proyecto
+└── static/              # Archivos públicos de la interfaz web
+    ├── index.html       # Estructura principal
+    ├── styles.css       # Estilos visuales
+    ├── app.js           # Lógica y peticiones asíncronas (Fetch)
+    └── fondo.jpg        # Recurso visual / fondo
+```
+
+---
+
+## 🛠️ Instalación y Configuración
+
+Sigue estos pasos para clonar el proyecto, configurar el entorno virtual y ejecutar el servidor localmente.
+
+### 1. Clonar el repositorio e ingresar a la carpeta
+```bash
+git clone <URL_DE_TU_REPOSITORIO>
+cd Python-Personal
+```
+
+### 2. Crear y activar el entorno virtual (`venv`)
+* **En Windows:**
+  ```bash
+  python -m venv venv
+  .\venv\Scripts\activate
+  ```
+* **En macOS/Linux:**
+  ```bash
+  python3 -m venv venv
+  source venv/bin/activate
+  ```
+
+### 3. Instalar las dependencias requeridas
+Una vez activo tu entorno virtual, instala los paquetes listados en el `requirements.txt`:
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## 🖥️ Ejecución del Servidor
+
+Para lanzar la aplicación con recarga automática en modo desarrollo (Uvicorn), ejecuta el siguiente comando desde la raíz:
+
+```bash
+uvicorn main:app --reload
+```
+
+Una vez que el servidor esté corriendo, puedes acceder mediante tu navegador web a:
+* **Aplicación Web:** `http://127.0.0.1:8000` (sirviendo el archivo `index.html`)
+* **Documentación interactiva de la API (Swagger UI):** `http://127.0.0`
+
+---
+
+## 🛠️ Tecnologías Utilizadas
+* **Backend:** [FastAPI](https://tiangolo.com) & [Uvicorn](https://uvicorn.org)
+* **Base de Datos:** [SQLite](https://sqlite.org)
+* **Frontend:** HTML5, CSS3, JavaScript (ES6)
